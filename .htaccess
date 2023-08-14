@@ -1,0 +1,18 @@
+RewriteEngine On
+# RewriteBase /uinssfinal/
+
+# Aturan rewrite untuk halaman masuk
+RewriteRule ^input$ form_input.php [L]
+
+RewriteRule ^token$ verifikasi_token.php [L]
+
+
+RewriteRule ^reset$ reset_token.php [L]
+
+# RewriteRule ^$ index.php [L]
+
+RewriteRule ^edit/([0-9]+)$ form_edit.php?id=$1 [L]
+
+RewriteRule ^password/([0-9]+)$ verifikasi_password.php?id=$1 [L]
+
+php_value display_errors 1
